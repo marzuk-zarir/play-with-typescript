@@ -51,3 +51,13 @@ class Person2 implements Person2Interface {
 const person2 = new Person2('emma', 30)
 
 console.log(person2)
+
+//* class as type declaration
+// personsArray can store only Person2's instances
+
+const personsArray: Person2[] = []
+const person3 = new Person2('name 1', 10)
+const person4 = new Person2('name 1', 10)
+
+personsArray.push(person3)
+personsArray.push(person4)
