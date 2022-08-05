@@ -5,7 +5,7 @@ let name1 = 'john doe'
 // Error bcz ts auto set name1 type to string
 // name1 = 1
 
-//* explicit types (string, number, boolean, any)
+//* explicit types (string, number, boolean, Function, any)
 
 let age: number = 20
 
@@ -96,14 +96,19 @@ const user: { id: number; name: string } = { id: 1, name: 'john doe' }
 // type alias helps to more readable
 // it is like a variable
 // it can be use multiple times
+// optional field can be declare with ?
+// readonly prop can be declare with readonly keyword
 
 type User = {
-    id: number
+    readonly id: number
     fullName: string
     email: string
+    age?: number
 }
 
 const user2: User = { id: 10, fullName: 'john doe', email: 'johndoe123@john.com' }
+
+// user2.id = 11 // => Error cz id is readonly property
 
 //* type assertion
 //? note: misuse of type assertion can break ts type checking
