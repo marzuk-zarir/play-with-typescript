@@ -3,6 +3,7 @@
 // public prop can access from the outside of class
 // private prop can access from only inside class
 // protected prop can access from inside class/child class
+// readonly prop can read from outside of class
 
 class Person1 {
     id = 1 // same as public id = 1
